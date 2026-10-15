@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Puthiverse</title>
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --text: #1d1d1f;
+    --glow: radial-gradient(60% 50% at 50% 0%, rgba(0,113,227,.10), transparent 70%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000;
+      --text: #f5f5f7;
+      --glow: radial-gradient(60% 50% at 50% 0%, rgba(41,151,255,.18), transparent 70%);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg) var(--glow) no-repeat;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-items: center;
+    padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
+  }
+  h1 {
+    white-space: nowrap;
+    text-align: center;
+    font-size: clamp(1rem, 5vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.04;
+    animation: rise 1s cubic-bezier(.22,.8,.3,1) both .1s;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { h1 { animation: none; } }
+</style>
+</head>
+<body>
+  <h1>Coming soon!</h1>
+</body>
+</html>
